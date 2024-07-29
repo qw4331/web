@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Toggle Image Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #container {
+            text-align: center;
+        }
+        #myImage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="toggleButton">Toggle Image</button>
+        <img id="myImage" src="download1.jpeg" alt="Placeholder Image" />
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var image = document.getElementById('myImage');
+            if (image.style.display === 'none') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
